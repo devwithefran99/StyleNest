@@ -14,7 +14,7 @@ window.SITE = {
 
   /* ---------- Brand ---------- */
   brand: {
-    name: "EZEL",
+    name: "StyleNest",
     tagline: "Made in Bangladesh",
     logo: "",          // e.g. "assets/logo.png". Khali thakle naam text hishebe dekhabe
     logoHeight: 28,    // px
@@ -27,7 +27,7 @@ window.SITE = {
   },
 
   seo: {
-    title: "EZEL | Everyday clothing made in Bangladesh",
+    title: "StyleNest | Everyday clothing made in Bangladesh",
     description: "Shirts, trousers, winter wear and festive panjabi. Cash on delivery all over Bangladesh."
   },
 
