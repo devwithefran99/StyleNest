@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brand</title>
+  <meta name="description" content="">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Brand data. Bodlate hole shudhu ei file -->
+  <script src="js/config.js"></script>
+</head>
+
+<body>
+
+  <div class="topbar" id="topbar" hidden></div>
+
+  <header class="site-nav" id="siteNav">
+    <div class="container d-flex align-items-center justify-content-between gap-3">
+      <a href="#top" class="brand" id="navBrand" aria-label="Home"></a>
+      <nav class="nav-links d-none d-lg-flex" id="navLinks" aria-label="Primary"></nav>
+      <div class="d-flex align-items-center gap-2">
+        <a class="btn-line d-none d-sm-inline-flex" id="navWa" href="#contact" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i>WhatsApp</a>
+        <button class="btn-round d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu" aria-label="Open menu"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="offcanvas offcanvas-end menu" tabindex="-1" id="menu" aria-label="Menu">
+    <div class="offcanvas-header">
+      <span class="brand" id="menuBrand"></span>
+      <button type="button" class="btn-round" data-bs-dismiss="offcanvas" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <nav class="menu-links" id="menuLinks"></nav>
+      <div class="menu-contact mt-auto" id="menuContact"></div>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6">
+            <p class="eyebrow hero-anim" id="heroEyebrow" style="--d:.05s"></p>
+            <h1 class="hero-title hero-anim" id="heroTitle" style="--d:.12s"></h1>
+            <p class="hero-sub hero-anim" id="heroSub" style="--d:.2s"></p>
+            <div class="hero-cta hero-anim" id="heroCta" style="--d:.28s"></div>
+            <ul class="hero-points hero-anim" id="heroPoints" style="--d:.36s"></ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-media hero-anim" id="heroMedia" style="--d:.15s"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections -->
+    <section class="section" id="collections">
+      <div class="container">
+        <div class="section-head" id="collectionsHead" data-reveal></div>
+        <div class="row g-3 g-lg-4" id="collectionGrid"></div>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section class="section pt-0" id="shop">
+      <div class="container">
+        <div class="section-head d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-2" data-reveal>
+          <div id="shopHead"></div>
+          <p class="shop-count" id="shopCount" aria-live="polite"></p>
+        </div>
+        <div class="filters mb-4" id="filters" role="tablist" aria-label="Filter products"></div>
+        <div class="row g-3 g-lg-4" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- Perks -->
+    <section class="section pt-0" id="perks">
+      <div class="container">
+        <div class="section-head" id="perksHead" data-reveal></div>
+        <div class="row g-4" id="perkGrid"></div>
+      </div>
+    </section>
+
+    <!-- Reviews (optional) -->
+    <section class="section pt-0" id="reviews" hidden>
+      <div class="container">
+        <div class="section-head" id="reviewsHead" data-reveal></div>
+        <div class="row g-3 g-lg-4" id="reviewGrid"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section pt-0" id="contact">
+      <div class="container">
+        <div class="contact-panel" data-reveal>
+          <h2 class="contact-title" id="ctaTitle"></h2>
+          <p class="contact-text" id="ctaText"></p>
+          <div class="contact-actions" id="ctaActions"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-lg-4 footer-brand" id="footerBrand"></div>
+        <div class="col-6 col-lg-2 footer-col" id="footerShop"></div>
+        <div class="col-6 col-lg-3 footer-col" id="footerHelp"></div>
+        <div class="col-lg-3 footer-col" id="footerContact"></div>
+      </div>
+      <div class="footer-bottom" id="footerBottom"></div>
+    </div>
+  </footer>
+
+  <a class="fab-wa" id="fabWa" href="#contact" target="_blank" rel="noopener" aria-label="Order on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+
+  <!-- Product modal -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="pmTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content pm">
+        <button type="button" class="btn-round pm-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+        <div class="row g-0">
+          <div class="col-md-6"><div class="pm-media" id="pmMedia"></div></div>
+          <div class="col-md-6">
+            <div class="pm-body">
+              <p class="pm-cat" id="pmCat"></p>
+              <h3 class="pm-title" id="pmTitle"></h3>
+              <div class="price pm-price" id="pmPrice"></div>
+              <p class="pm-desc" id="pmDesc"></p>
+              <p class="pm-label">Size</p>
+              <div class="sizes" id="pmSizes" role="radiogroup" aria-label="Size"></div>
+              <div class="d-grid gap-2">
+                <a class="btn-solid justify-content-center" id="pmOrder" href="#" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i>Order on WhatsApp</a>
+                <a class="btn-line justify-content-center" id="pmCall" href="#"><i class="bi bi-telephone"></i>Call to order</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <noscript><p style="position:fixed;inset:auto 0 0 0;padding:1rem;background:#111;color:#fff;text-align:center;z-index:3000;margin:0">Please enable JavaScript to view this page.</p></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
